@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #car{
+            height: 200px;
+            width: 500px;
+            background-image: url('images.jpg');
+            background-repeat: no-repeat;
+            margin-top: 20px;
+            border-radius: 20% 20% 0 0;
+            position: absolute;
+            left: 0px; /* added */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="car"></div>
+    <input type="button" value="left" id="l">
+    <input type="button" value="right" id="r">
+
+    <script>
+        let leftBtn = document.getElementById('l');
+        let rightBtn = document.getElementById('r');
+        let car = document.getElementById('car');
+
+        function moveLeft(){
+            car.style.left = car.offsetLeft - 20 + "px";
+        }
+
+        function moveRight(){
+            car.style.left = car.offsetLeft + 20 + "px";
+        }
+
+        leftBtn.addEventListener('click', moveLeft);
+        rightBtn.addEventListener('click', moveRight);
+    </script>
+
+</body>
+</html>

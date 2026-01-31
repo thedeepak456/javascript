@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /**************************************************
+ * JAVASCRIPT FUNCTIONS – SINGLE PAGE EXAMPLE
+ * 1. Anonymous Function
+ * 2. Arrow Function
+ * 3. Callback Function
+ **************************************************/
+
+/* -----------------------------------------------
+   1️⃣ ANONYMOUS FUNCTION
+   - Function without a name
+   - Used when function is needed only once
+------------------------------------------------ */
+
+// Anonymous function assigned to a variable
+let greet = function () {
+  console.log("Hello! This is an Anonymous Function");
+};
+
+// Calling the function
+greet();
+
+
+/* Real-world example:
+   Button click event (one-time usage)
+*/
+document.getElementById("btn")?.addEventListener("click", function () {
+  console.log("Button clicked using Anonymous Function");
+});
+
+
+/* -----------------------------------------------
+   2️⃣ ARROW FUNCTION
+   - Shorter syntax
+   - Does NOT have its own 'this'
+------------------------------------------------ */
+
+// Arrow function to add two numbers
+const add = (a, b) => {
+  return a + b;
+};
+
+console.log("Arrow Function Add:", add(10, 20));
+
+/* Short arrow function (implicit return) */
+const multiply = (a, b) => a * b;
+
+console.log("Arrow Function Multiply:", multiply(5, 4));
+
+
+/* Real-world example:
+   Calculate total price with tax
+*/
+const calculateTotalPrice = (price) => price + price * 0.18;
+
+console.log("Total Price with Tax:", calculateTotalPrice(1000));
+
+
+/* -----------------------------------------------
+   3️⃣ CALLBACK FUNCTION
+   - Function passed as an argument
+   - Executed later
+------------------------------------------------ */
+
+// Main function
+function placeOrder(order, callback) {
+  console.log("Order placed for:", order);
+
+  // Simulating delay (like server response)
+  setTimeout(function () {
+    console.log("Order is ready!");
+    callback(); // calling callback function
+  }, 2000);
+}
+
+// Callback function
+function deliverOrder() {
+  console.log("Delivering the order 🚴‍♂️");
+}
+
+// Passing function as callback
+placeOrder("Pizza", deliverOrder);
+
+
+/* -----------------------------------------------
+   COMBINED EXAMPLE
+   - Arrow Function
+   - Anonymous Function
+   - Callback Function
+------------------------------------------------ */
+
+// setTimeout uses a callback function
+setTimeout(() => {
+  console.log("This message runs after 3 seconds");
+}, 3000);
+
+    </script>
+</body>
+</html>

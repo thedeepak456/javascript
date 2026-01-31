@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <h1 id="heading"></h1>
+        <p id="discreption"></p>
+    </div>
+
+    <script>
+        let a = document.getElementById('box')
+        let b = document.getElementById('heading')
+        let c = document.getElementById('discreption')
+
+        let h = prompt("Enter how much height you want in px")
+        let w = prompt("Enter how much width you want in px")
+        let colour = prompt('Enter which Background colour you want for box')
+
+        a.style.height = h
+        a.style.width = w
+        a.style.backgroundColor = colour
+        b.innerText = 'hello kese ho aap'
+    </script>
+</body>
+</html>

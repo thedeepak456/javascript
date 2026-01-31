@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+</head>
+<body>
+    
+    <script>
+        let points = 0
+        let question1 = prompt(`Which festival is known as the Festival of Lights? \nA) HOLI \nB) CHRISTMAS \nC) DIWALI \nD) EID \nTotal Points : ${points}`)
+        switch (question1) {
+            case "HOLI":
+                alert("wrong answer")
+                break;
+            case "CHRISTMAS":
+                alert("wrong answer")
+                break;
+            case "DIWALI":
+                points +=1
+                alert(`Right Answer.\nTotal points : ${points}`)
+                
+                break;
+            case "EID":
+                alert("wrong answer")
+                break;
+            default:
+                alert("Invalid option")
+
+        }
+        let question2 = prompt(`Who is known as the missile man of India? \nA) Homi Bhabha \nB) Vikram Sarabhai \nC) A. P. J. Abdul Kalam \nD) C. V. Raman \nTotal Points : ${points}`)
+        switch (question2) {
+            case "Homi Bhabha":
+                alert("wrong answer")
+                break;
+            case "Vikram Sarabhai":
+                alert("wrong answer")
+                break;
+            case "A. P. J. Abdul Kalam":
+                points +=1
+                alert(`Right Answer.\nTotal points : ${points}`)
+                
+                break;
+            case "C. V. Raman":
+                alert("wrong answer")
+                break;
+            default:
+                alert("Invalid option")
+
+        }
+        let question3 = "What is the largest desert in the world?"
+        let question4 = "Which gas do plants take in for photosynthesis?"
+        let question5 = "What is the capital of India?"
+
+        
+    </script>
+</body>
+</html>

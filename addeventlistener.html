@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 300px;
+            width: 600px;
+            background-image: url('Img-home-footer.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+        let box = document.getElementById('box')
+        function colorChange1(){
+            box.style.backgroundImage = "url('Img-aot-2.jpeg')"
+        }
+        function colorChange2(){
+            box.style.backgroundImage = "url('Img-home-footer.jpg')"
+        }
+        box.addEventListener('mouseenter',colorChange1)
+        box.addEventListener('mouseleave',colorChange2)
+    </script>
+</body>
+</html>

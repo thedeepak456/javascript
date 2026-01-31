@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: #fff;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Login</h2>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+
+    <p class="error" id="error"></p>
+
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const error = document.getElementById("error");
+
+      // Correct login details (example)
+      const correctEmail = "test@gmail.com";
+      const correctPassword = "123456";
+
+      if (email === correctEmail && password === correctPassword) {
+        // Switch window (redirect)
+        window.location.href = "dashboard.html";
+      } else {
+        error.textContent = "Invalid email or password";
+      }
+    }
+  </script>
+
+</body>
+</html>

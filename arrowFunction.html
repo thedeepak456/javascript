@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="head"></h1>
+    <script>
+        /* -----------------------------------------------
+    3️⃣ CALLBACK FUNCTION
+    - Function passed as an argument
+    - Executed later
+ ------------------------------------------------ */
+
+        // Main function
+        function placeOrder(order, callback) {
+            document.write("Order placed for:", order);
+
+            // Simulating delay (like server response)
+            setTimeout(function () {
+                document.write("Order is ready!");
+                callback(); // calling callback function
+            }, 10000);
+        }
+
+        // Callback function
+        function deliverOrder() {
+            document.write("Delivering the order 🚴‍♂️");
+        }
+
+        // Passing function as callback
+        placeOrder("Pizza", deliverOrder);
+    </script>
+
+</body>
+
+</html>

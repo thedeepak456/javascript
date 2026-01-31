@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="loginForm">
+        <h1>Login</h1>
+    <form action="https://google.com">
+        <input type="email" id="email" required>
+        <input type="password" id="password" required>
+        <input type="submit" onclick="checkauth()">
+    </form>
+    </div>
+    <script>
+        let username1 = 'shivam333@gmail.com'
+        let pass1 = 'shivam123'
+        
+        function checkauth(){
+            let email = document.getElementById('email').value.trim()
+            let password = document.getElementById('password').value
+
+            if (email == username1 && password == pass1){
+                alert("Login Success")
+            }
+            else{
+                alert('Invalid Email and Password')
+            }
+        }
+
+    </script>
+</body>
+</html>

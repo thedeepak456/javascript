@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let num = [1,2,3,4,5,6]
+        // // let newNum = num.forEach(item => document.write(item+," "))
+        // let newNum = num.map( (item) => item +10)
+        // document.write(newNum)
+
+        // let arr = [10,20,30,40,50]
+        // let greater = arr.filter( (item) => item<25)
+        // document.write(greater)
+
+        const jobs = [
+  // 1
+  { jobname: "Frontend Developer", sector: "IT", position: "Junior", salary: 40000 },
+  // 2
+  { jobname: "Backend Developer", sector: "IT", position: "Mid", salary: 65000 },
+  // 3
+  { jobname: "Full Stack Developer", sector: "IT", position: "Senior", salary: 95000 },
+  // 4
+  { jobname: "Data Analyst", sector: "IT", position: "Mid", salary: 70000 },
+  // 5
+  { jobname: "Data Scientist", sector: "IT", position: "Senior", salary: 110000 },
+
+  // 6
+  { jobname: "Accountant", sector: "Finance", position: "Junior", salary: 38000 },
+  // 7
+  { jobname: "Financial Analyst", sector: "Finance", position: "Mid", salary: 62000 },
+  // 8
+  { jobname: "Finance Manager", sector: "Finance", position: "Senior", salary: 90000 },
+  // 9
+  { jobname: "Auditor", sector: "Finance", position: "Mid", salary: 58000 },
+  // 10
+  { jobname: "Tax Consultant", sector: "Finance", position: "Senior", salary: 85000 },
+
+  // 11
+  { jobname: "HR Assistant", sector: "HR", position: "Junior", salary: 35000 },
+  // 12
+  { jobname: "HR Executive", sector: "HR", position: "Mid", salary: 52000 },
+  // 13
+  { jobname: "HR Manager", sector: "HR", position: "Senior", salary: 78000 },
+  // 14
+  { jobname: "Recruiter", sector: "HR", position: "Mid", salary: 50000 },
+  // 15
+  { jobname: "Talent Manager", sector: "HR", position: "Senior", salary: 82000 },
+
+  // 16
+  { jobname: "Sales Executive", sector: "Sales", position: "Junior", salary: 30000 },
+  // 17
+  { jobname: "Sales Manager", sector: "Sales", position: "Mid", salary: 55000 },
+  // 18
+  { jobname: "Regional Sales Head", sector: "Sales", position: "Senior", salary: 90000 },
+  // 19
+  { jobname: "Business Developer", sector: "Sales", position: "Mid", salary: 60000 },
+  // 20
+  { jobname: "Account Manager", sector: "Sales", position: "Senior", salary: 75000 },
+
+  // 21
+  { jobname: "Marketing Intern", sector: "Marketing", position: "Junior", salary: 28000 },
+  // 22
+  { jobname: "SEO Specialist", sector: "Marketing", position: "Mid", salary: 48000 },
+  // 23
+  { jobname: "Content Strategist", sector: "Marketing", position: "Mid", salary: 52000 },
+  // 24
+  { jobname: "Marketing Manager", sector: "Marketing", position: "Senior", salary: 80000 },
+  // 25
+  { jobname: "Brand Manager", sector: "Marketing", position: "Senior", salary: 88000 },
+
+  // 26
+  { jobname: "UI Designer", sector: "Design", position: "Junior", salary: 42000 },
+  // 27
+  { jobname: "UX Designer", sector: "Design", position: "Mid", salary: 60000 },
+  // 28
+  { jobname: "Product Designer", sector: "Design", position: "Senior", salary: 85000 },
+  // 29
+  { jobname: "Graphic Designer", sector: "Design", position: "Mid", salary: 50000 },
+  // 30
+  { jobname: "Creative Director", sector: "Design", position: "Senior", salary: 95000 },
+
+  // 31
+  { jobname: "Mechanical Engineer", sector: "Engineering", position: "Junior", salary: 45000 },
+  // 32
+  { jobname: "Electrical Engineer", sector: "Engineering", position: "Mid", salary: 65000 },
+  // 33
+  { jobname: "Civil Engineer", sector: "Engineering", position: "Senior", salary: 90000 },
+  // 34
+  { jobname: "Project Engineer", sector: "Engineering", position: "Mid", salary: 70000 },
+  // 35
+  { jobname: "Engineering Manager", sector: "Engineering", position: "Senior", salary: 105000 },
+
+  // 36
+  { jobname: "Customer Support Agent", sector: "Support", position: "Junior", salary: 32000 },
+  // 37
+  { jobname: "Support Executive", sector: "Support", position: "Mid", salary: 45000 },
+  // 38
+  { jobname: "Support Manager", sector: "Support", position: "Senior", salary: 65000 },
+  // 39
+  { jobname: "Technical Support", sector: "Support", position: "Mid", salary: 50000 },
+  // 40
+  { jobname: "Client Success Manager", sector: "Support", position: "Senior", salary: 72000 },
+
+  // 41
+  { jobname: "Operations Assistant", sector: "Operations", position: "Junior", salary: 34000 },
+  // 42
+  { jobname: "Operations Executive", sector: "Operations", position: "Mid", salary: 52000 },
+  // 43
+  { jobname: "Operations Manager", sector: "Operations", position: "Senior", salary: 78000 },
+  // 44
+  { jobname: "Supply Chain Analyst", sector: "Operations", position: "Mid", salary: 60000 },
+  // 45
+  { jobname: "Logistics Manager", sector: "Operations", position: "Senior", salary: 85000 },
+
+  // 46
+  { jobname: "QA Tester", sector: "IT", position: "Junior", salary: 42000 },
+  // 47
+  { jobname: "Automation Tester", sector: "IT", position: "Mid", salary: 65000 },
+  // 48
+  { jobname: "DevOps Engineer", sector: "IT", position: "Senior", salary: 100000 },
+  // 49
+  { jobname: "Cloud Architect", sector: "IT", position: "Senior", salary: 120000 },
+  // 50
+  { jobname: "System Administrator", sector: "IT", position: "Mid", salary: 70000 }
+];
+        let result = jobs.filter( (item) => item.sector === 'IT')
+        document.write(result)
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>To-Do List (localStorage)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px;
+            margin-left: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px;
+            margin: 5px 0;
+            background: #f3f3f3;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .delete {
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>To-Do List</h2>
+
+    <input id="taskInput" type="text" placeholder="New task..." />
+    <button id="addTaskBtn">Add</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        const taskInput = document.getElementById("taskInput");
+        const addTaskBtn = document.getElementById("addTaskBtn");
+        const taskList = document.getElementById("taskList");
+
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+        function renderTasks() {
+            taskList.innerHTML = "";
+
+            for (let i = 0; i < tasks.length; i++) {
+                const li = document.createElement("li");
+                li.textContent = tasks[i];
+
+                const deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "X";
+                deleteBtn.classList.add("delete");
+                deleteBtn.addEventListener("click", () => deleteTask(i));
+
+                li.appendChild(deleteBtn);
+                taskList.appendChild(li);
+            }
+        }
+
+        function addTask() {
+            const task = taskInput.value.trim();
+            if (task === "") return;
+
+            tasks.push(task);
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+
+            taskInput.value = "";
+            renderTasks();
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+            renderTasks();
+        }
+
+        addTaskBtn.addEventListener("click", addTask);
+        taskInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") addTask();
+        });
+
+        renderTasks();
+    </script>
+</body>
+
+</html>
