@@ -7,7 +7,7 @@ console.log("\n=== map Examples ===");
 
 // Example 1: Square numbers
 const nums = [1, 2, 3, 4];
-const squares = nums.map(num => num * num);
+const squares = nums.map(num => num*2);
 console.log("Squares:", squares);
 
 // Example 2: Extract names from objects

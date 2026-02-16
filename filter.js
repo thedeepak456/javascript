@@ -13,7 +13,7 @@ console.log("Numbers > 5:", greaterThanFive);
 // Example 2: Active users
 const usersStatus = [
   { name: "Alice", active: true },
-  { name: "Bob", active: false },
+  { name: "Bob", active: true },
   { name: "Charlie", active: true }
 ];
 const activeUsers = usersStatus.filter(user => user.active);
@@ -21,7 +21,7 @@ console.log("Active Users:", activeUsers);
 
 // Example 3: Words containing "l"
 const words2 = ["apple", "banana", "lemon"];
-const wordsWithL = words2.filter(word => word.includes("l"));
+const wordsWithL = words2.filter(word => word.includes("on"));
 console.log("Words with 'l':", wordsWithL);
 
 // Real-Time Example: Filter affordable products

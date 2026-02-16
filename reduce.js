@@ -6,7 +6,7 @@
 console.log("\n=== reduce Examples ===");
 
 // Example 1: Sum of numbers
-const nums2 = [5, 10, 15];
+const nums2 = [5, 10, 15,5];
 const totalSum = nums2.reduce((acc, num) => acc + num, 0);
 console.log("Total Sum:", totalSum);
 
