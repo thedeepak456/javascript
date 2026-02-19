@@ -29,5 +29,5 @@ const cartItems = [
   { name: "Pen", price: 50, qty: 5 },
   { name: "Notebook", price: 100, qty: 3 }
 ];
-const cartTotal = cartItems.reduce((total, item) => total + item.price * item.qty, 0);
+const cartTotal = cartItems.reduce((total,  ) => total + item.price * item.qty, 0);
 console.log("Cart Total:", cartTotal);
